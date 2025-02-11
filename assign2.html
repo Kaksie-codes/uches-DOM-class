@@ -123,6 +123,15 @@
         for(let faq of faqs){
             faq.addEventListener('click', () => {
                 const answer = faq.querySelector('.answer');
+                
+                const icon = faq.querySelector('.fa');
+                if(icon.classList.contains('fa-plus-circle')){
+                    icon.classList.remove('fa-plus-circle');
+                    icon.classList.add('fa-minus-circle');
+                }else{
+                    icon.classList.replace('fa-minus-circle', 'fa-plus-circle');
+                }
+                console.log(icon)
                 answer.classList.toggle('show');
                 console.log(answer);
             })
